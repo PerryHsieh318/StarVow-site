@@ -1,0 +1,25 @@
+/* The alternate costumes share the original stage, with bounds fitted to their wider silhouettes. */
+.party {container-type:size}
+.party .actor {height:auto}
+.party [data-costume="maple-neo"] {
+  aspect-ratio:472/706;
+  width:min(45cqw, 58cqh);
+  left:24%;bottom:0;
+}
+.party [data-costume="maple-frost"] {
+  aspect-ratio:737/667;
+  width:min(48cqw, 70cqh);
+  right:0;left:auto;top:2%;
+}
+.party [data-costume="maple-captain"] {
+  aspect-ratio:588/702;
+  width:min(28cqw, 37cqh);
+  left:0;top:26%;
+}
+@media (max-width:760px) {
+  .party [data-costume="maple-neo"] {left:25%}
+  .party [data-costume="maple-captain"] {left:1%;top:29%}
+}
+.actor[data-costume] .spell {inset:auto;mix-blend-mode:normal}
+[data-costume="maple-captain"] .spell {z-index:-1}
+@media(prefers-reduced-motion:reduce){.actor[data-costume] .spell{display:block}}

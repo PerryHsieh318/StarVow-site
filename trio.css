@@ -1,0 +1,51 @@
+.landscape img{object-position:center top;filter:saturate(.92) brightness(.88)}
+.party [data-costume="kain-dragon"]{height:auto;aspect-ratio:auto;left:16%;bottom:-6%;width:min(73cqw,90cqh);z-index:3}
+.party [data-costume="maple-frost"]{width:min(49cqw,64cqh);right:-4%;top:-1%}
+.party [data-costume="maple-captain"]{width:min(37cqw,45cqh);left:-7%;top:10%}
+.party [data-costume="kain-dragon"] picture{animation:dash 5s infinite;transform-origin:68% 60%}
+.party .actor .spell{scale:1.14}
+.party [data-costume="kain-dragon"] .spell{scale:1}
+.hero:has(.motion-switch[aria-label="播放場景動畫"]) .party picture{animation-play-state:paused}
+@keyframes dash{0%,70%,100%{transform:translate(0,0) scale(1)}78%{transform:translate(-1.3%,-1.4%) scale(.975)}84%{transform:translate(2.1%,1.5%) scale(1.065)}}
+@media(max-width:760px){.party [data-costume="maple-frost"]{right:1%;top:0}.party [data-costume="maple-captain"]{left:1%;top:8%}.party [data-costume="kain-dragon"]{left:20%;width:min(67cqw,87cqh);bottom:0}}
+@media(prefers-reduced-motion:reduce){.party [data-costume="kain-dragon"] picture{animation:none}}
+.hero .action{
+  min-height:58px;padding:.8rem clamp(1rem,1.8vw,1.9rem);
+  font-size:clamp(1rem,1.32vw,1.22rem);border-radius:9px;letter-spacing:.025em;
+  transition:transform .18s,box-shadow .18s;
+}
+.hero .action .icon{width:1.4em;height:1.4em}
+.hero .action.gold{
+  color:#362117;background:linear-gradient(170deg,#fff1c0,#ffce69 72%,#f3b641);
+  border:2px solid #ffedb6;box-shadow:0 4px 0 #946129,0 8px 20px #130b1c99;
+}
+.hero .action.outline{
+  background:linear-gradient(165deg,#554ec4,#37328f);color:white;border:2px solid #cbc9ff;
+  box-shadow:0 4px 0 #272450,0 8px 20px #130b1c99;
+}
+.hero .action:hover{transform:translateY(-2px)}
+.hero .action:focus-visible{outline:3px solid white;outline-offset:4px}
+@media(min-width:761px){
+ .landscape{inset:0;width:100%;height:100%;background:#191627}
+ .landscape img{object-position:50% 4%}
+ .shade{background:linear-gradient(0deg,#090e25ed 0%,transparent 45%),radial-gradient(ellipse at 13% 66%,#101229dc 0%,#16132877 24%,transparent 55%)}
+ .party{align-self:end}
+ .hero-copy{align-self:end;padding-bottom:1rem}
+}
+@media(max-width:760px){
+ .hero{background:linear-gradient(140deg,#322130,#142341 65%,#10182c)}
+ .landscape{inset:0;width:100%;height:auto;aspect-ratio:16/9;mask-image:linear-gradient(#000 70%,transparent)}
+ .landscape img{object-fit:contain;object-position:top}
+ .hero-body{padding-top:clamp(90px,28vw,200px)}
+ .hero .actions{gap:.65rem}
+ .hero .action{min-height:50px;font-size:1rem;padding:.65rem .85rem}
+ .shade{background:linear-gradient(0deg,#10172b99,transparent 70%)}
+}
+@media(prefers-reduced-motion:reduce){.hero .action{transition:none}.hero .action:hover{transform:none}}
+@media(min-width:761px){
+ .party [data-costume="maple-frost"]{top:28%;right:-6%;width:min(43cqw,59cqh)}
+}
+.hero h1{font-size:clamp(2.6rem,4.6vw,5rem);letter-spacing:.02em}
+.hero-intro{max-width:27em;text-wrap:pretty;color:#fff7ed}
+.brand{color:#f5e8ce}
+@media(max-width:760px){.hero h1{font-size:clamp(2.25rem,8vw,3.8rem)}}
